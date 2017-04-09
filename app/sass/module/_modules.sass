@@ -1,19 +1,36 @@
 
 
 .page-header__center
+	
 	&__nav-log
 		display: flex
 		justify-content: space-between
 		padding-top: 19px
 		margin-bottom: 65px
+		
 		&__nav
 			display: flex
 			align-items: center
 			justify-content: space-between
-			width: 51%	
+			width: 51%
+
 			&__item
 				height: 82%
-				padding-top: 7px			
+				padding-top: 7px
+				color: #fff
+				.dots
+					margin-right: 6px
+					position: relative
+					.fa
+						font-size: 5px
+						padding-left: 1px
+						margin-right: 4px
+					
+				&:hover
+					border-bottom: 2px #fff solid
+					text-decoration: none
+					color: #fff
+
 		&__log
 			display: flex
 			align-items: center
@@ -21,9 +38,31 @@
 			width: 33%	
 			&__place-advert
 				padding-left: 13%
+				color: #fff
+				display: inline-block
+				border: none
+				text-decoration: none
+				background-color: lighten($accent, 3%)
+				padding: 15px 45px
+				font-weight: 300
+				border-radius: 2px
+				text-align: center
+				outline: none
+				white-space: nowrap
+				.fa
+					margin-right: 5px
+				&:hover
+						text-decoration: none
+						color: #fff
+						background-color: lighten($accent, 6%)
+						transition: background-color .25s ease
+			&__log-in
+				color: #fff
+				margin-left: 14px	
 	&__big-text
 		font-size: 34px
 		margin-bottom: 42px
+		color: #fff
 	&__form
 		display: flex
 		justify-content: space-between
@@ -32,6 +71,7 @@
 			&__text
 				display: block
 				margin-bottom: 11px
+				color: #fff
 			&__selection
 				width: 100%	
 				height: 40px
@@ -40,18 +80,33 @@
 			&__text
 				display: block
 				margin-bottom: 11px
+				color: #fff
 			&__rooms-amount
 				height: 40px
 				width: 40px
 				border-radius: 50%
 				margin-right: 7px
 				background-color: #FFF
+				сolor: $dark
+				&:hover
+					background-color: $accent
+					border: 2px #fff solid
+					сolor: #fff
+
+
 		&__submit
 			width: 23%
 			height: 40px	
 			align-self: flex-end
 			padding-right: 20px	
-			background-color: #FFF
+			color: $accent
+			background-color: #fff
+			&:hover
+				text-decoration: none
+				color: #fff
+				background-color: lighten($accent, 6%)
+				transition: background-color .25s ease
+			
 
 
 .main
@@ -72,6 +127,7 @@
 				margin-bottom: 22px
 				&__item
 					padding-bottom: 10px
+
 			&__form
 				&__selection
 					margin-left: 2px
@@ -82,6 +138,7 @@
 					width: 100%
 					height: 40px
 					padding-left: 8px
+					//
 
 	&__best
 		&__big-text
@@ -97,22 +154,46 @@
 			padding-right: 2px	
 			margin-bottom: 40px
 			&__item
+				color: $dark
+				&:hover
+					text-decoration: none
+					color: inherit
 				&__img
 					margin-bottom: 20px
 				&__price
 					font-size: 17px
 					margin-bottom: 7px
+					.fa
+						color: $accent
+						margin-left: 10px
+
 				&__info
 					font-size: 13px
+					color: #8C9BA5
 				&__loc
 					padding-top: 16px
 					padding-right: 7px
 					font-size: 13px
+					.fa
+						color: #E71D32
+						margin-right: 5px
 		&__prices
 			display: block
 			text-align: center
 			font-size: 18px
 			padding: 11px 0px
+			color: $dark
+			&::before
+				content: ''
+				height: 2px
+				width: 100%
+				position: relative
+				background-color: #D8D8D8
+				display: inline-block
+			&:hover
+				text-decoration: none
+				color: inherit
+
 	
 	&__advert
 		&__big-text
@@ -135,35 +216,61 @@
 			padding-right: 2px	
 			margin-bottom: 50px
 			&__item
+				color: $dark
+				&:hover
+						text-decoration: none
+						color: inherit
 				&__img
 					margin-bottom: 20px
 				&__price
 					font-size: 17px
 					margin-bottom: 7px
+					.fa
+						color: $accent
+						margin-left: 10px
 				&__info
 					font-size: 13px
 				&__loc
 					padding-top: 16px
 					padding-right: 7px
 					font-size: 13px
+					.fa-red
+						color: #E71D32
+						margin-right: 5px
+					.fa-blue
+						color: #2573D8
+						margin-right: 5px
+					
 		&__fresh
 			display: block
 			text-align: center
 			font-size: 18px
 			padding: 10px 0
+			color: $dark
+			&::before
+				content: ''
+				height: 2px
+				width: 100%
+				position: relative
+				background-color: #D8D8D8
+				display: inline-block
+			&:hover
+				text-decoration: none
+				color: inherit
 	
 	&__social
 		&__big-text
 			text-align: center
-			font-size: 26px
+			font-size: 24px
 			padding-top: 43px
 			margin-bottom: 23px
 		&__small-text
 			max-width: 504px
 			margin: 0 auto
-			line-height: 1.31	
+			line-height: 2.1	
 			text-align: center
 			margin-bottom: 20px
+			font-size: 14px
 		&__option
 			display: flex
 			justify-content: center
@@ -184,6 +291,8 @@
 				padding: 52px 74px 0px 41px
 				background-color: #FFF
 				margin: 63px 2px 65px auto
+				ol
+					list-style-type: decimal
 				&__name
 					font-size: 27px
 					text-align: center
@@ -199,6 +308,7 @@
 				&__ol
 					padding-left: 22px
 					margin-bottom: 32px
+
 					&__item
 						margin-bottom: 12px
 						line-height: 1.25
@@ -206,8 +316,9 @@
 					display: block
 					padding: 12px 0px
 					padding-left: 5px
-					text-align: center
-					background-color: green
+					
+
+
 			&__flags	
 				position: absolute
 				width: 100%
@@ -220,14 +331,14 @@
 		&__big-text
 			text-align: center
 			padding-top: 22px
-			font-size: 27px
+			font-size: 24px
 			margin-bottom: 24px
 		&__small-text
-			font-size: 16px
+			font-size: 14px
 			max-width: 476px
 			margin: 0 auto
 			margin-bottom: 20px
-			line-height: 1.3
+			line-height: 2.1
 			text-align: center
 		&__slider
 			display: flex	
@@ -237,6 +348,10 @@
 			margin-bottom: 41px
 			&__item
 				max-width: 272px
+				color: $dark
+				&:hover
+						text-decoration: none
+						color: inherit
 				&__img
 					margin-bottom: 16px
 				&__rubric
@@ -253,6 +368,17 @@
 			text-align: center
 			font-size: 18px
 			padding: 10px 0
+			color: $dark
+			&::before
+				content: ''
+				height: 2px
+				width: 100%
+				position: relative
+				background-color: #D8D8D8
+				display: inline-block
+			&:hover
+				text-decoration: none
+				color: inherit
 
 .page-footer	
 	display: flex
