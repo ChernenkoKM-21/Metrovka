@@ -352,6 +352,14 @@
 				&:hover
 						text-decoration: none
 						color: inherit
+				.pink_item
+					color: #BA8FF7
+				.green_item
+					color: $accent
+				.blue_item
+					color: #2573D8
+				p
+					color: #8C9BA5
 				&__img
 					margin-bottom: 16px
 				&__rubric
@@ -391,12 +399,20 @@
 	&__know-more,
 	&__contacts
 		max-width: 202px
+		line-height: 3.2
+		font-size: 16px
 		&__name	
 			margin-bottom: 21px
 		&__item
 			display: block
 			margin-bottom: 17px
-			line-height: 1.2
+			line-height: 2
+			font-size: 13px
+			color: $dark
+			&:hover
+				text-decoration: none
+				color: inherit
+
 	&__partnership
 		max-width: 185px	
 		margin-left: -9px
@@ -408,12 +424,17 @@
 		flex-basis: 202px
 		&__item
 			margin-bottom: 14px
+			.fa
+				font-size: 20px
+				&:hover
+					text-decoration: none
 			&__icon	
 				margin-right: 11px
 		&__button
 			padding: 12px 0px
 			display: block
 			text-align: center
+			line-height: 1.2
 			width: 80%
 			margin-top: 23px
 	&__logo
