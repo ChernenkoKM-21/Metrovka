@@ -62,12 +62,58 @@
 				display: block
 				margin-bottom: 11px
 				color: #fff
+			
+			.dropdown-toggle.btn-primary:focus
+				background-color: #fff
+				color: #000
+				border-color: #DFE3E6
+			.open > .dropdown-toggle.btn-primary
+				background-color: #fff
+				color: #000
+				border-color: #DFE3E6
+				&:focus
+					background-color: #fff
+					color: #000
+					border-color: #DFE3E6
+			.btn .caret
+				position: absolute
+				right: 19px
+				top: 18px
+				color: #30AE63
+				width: 9px
+			.dropdown-menu
+				margin: 0
+				width: 100%
+				border: 0
+				border-radius: 0 0 2px 2px
+				padding: 0
+				>li>a
+					height: 37px
+					font-weight: 600
+					padding: 10px 16px
+				li a:hover
+					background-color: #30AE63
+					color: #FFF
 			&__selection
 				width: 100%	
 				height: 40px
-				padding: 0px 60px 0px 13px
+				padding: 0px 0px 0px 13px
 				border-radius: 2px
+				background-color: #fff
+				text-align: left
+				color: #000
 				border: 2px #DFE3E6 solid
+				font-weight: 600
+				&:hover
+					background-color: #fff
+					color: #000
+					border: 2px #DFE3E6 solid
+				&:focus
+					background-color: #fff
+					color: #000
+					border: 2px #DFE3E6 solid
+						
+				
 		&__room
 			width: 29%
 			&__text
@@ -117,20 +163,61 @@
 					border-bottom: 2px transparent solid
 
 			&__form
+				.dropdown-toggle.btn-primary:focus
+					background-color: #fff
+					color: #000
+					border-color: #DFE3E6
+				.open > .dropdown-toggle.btn-primary
+					background-color: #fff
+					color: #000
+					border-color: #DFE3E6
+					&:focus
+						background-color: #fff
+						color: #000
+						border-color: #DFE3E6
+				.btn 
+					text-align: left
+					background-color: #fff
+					color: #000	
+					font-weight: 600
+					border: 2px #DFE3E6 solid 
+				.btn .caret
+					position: absolute
+					right: 19px
+					top: 18px
+					color: #30AE63
+					width: 9px
+				.dropdown-menu
+					margin: 0px 0px 0px 3px
+					width: 97%
+					border: 0
+					border-radius: 0 0 2px 2px
+					padding: 0
+					>li>a
+						height: 37px
+						font-weight: 600
+						padding: 11px 38px
+						font-size: 11px
+					li a:hover
+						background-color: #30AE63
+						color: #FFF
 				&__selection
 					margin-left: 2px
 					width: 98%
 					height: 40px
-					margin-bottom: 31px
-					padding-left: 34px
 					font-size: 12px
 					letter-spacing: -0.7px
+					.fa	
+						color: red
+						font-size: 10px
+						margin: 0px 12px 0px 4px
 				&__submit
 					width: 100%
 					height: 40px
 					padding-left: 8px
 					font-size: 13px
 					font-weight: normal
+					margin-top: 31px
 		&__pic
 			padding-left: 85px
 
@@ -271,7 +358,9 @@
 			border-top: 2px #D8D8D8 solid
 			letter-spacing: -0.5px
 	
+	
 	&__social
+		font-weight: 600
 		&__big-text
 			text-align: center
 			font-size: 23px
@@ -307,7 +396,6 @@
 				padding: 52px 74px 0px 41px
 				background-color: #FFF
 				margin: 63px 2px 65px auto
-				font-weight: 600
 				ol
 					list-style-type: decimal
 				&__name
