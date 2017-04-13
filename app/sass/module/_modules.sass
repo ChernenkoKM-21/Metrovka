@@ -5,15 +5,16 @@
 	&__nav-log
 		display: flex
 		justify-content: space-between
-		padding-top: 17px
-		margin-bottom: 65px
+		padding-top: 19px
+		margin-bottom: 66px
 		
 		&__nav
 			display: flex
 			align-items: center
 			justify-content: space-between
 			width: 51%
-
+			&__logo
+				margin-right: 10px
 			&__item
 				height: 82%
 				padding-top: 7px
@@ -48,9 +49,10 @@
 				padding-bottom: 9px
 				border-bottom: 2px transparent solid
 	&__big-text
-		font-size: 34px
-		margin-bottom: 41px
+		font-size: 31px
+		margin-bottom: 45px
 		color: #fff
+		word-spacing: -3px
 	&__form
 		display: flex
 		justify-content: space-between
@@ -60,12 +62,58 @@
 				display: block
 				margin-bottom: 11px
 				color: #fff
+			
+			.dropdown-toggle.btn-primary:focus
+				background-color: #fff
+				color: #000
+				border-color: #DFE3E6
+			.open > .dropdown-toggle.btn-primary
+				background-color: #fff
+				color: #000
+				border-color: #DFE3E6
+				&:focus
+					background-color: #fff
+					color: #000
+					border-color: #DFE3E6
+			.btn .caret
+				position: absolute
+				right: 19px
+				top: 18px
+				color: #30AE63
+				width: 9px
+			.dropdown-menu
+				margin: 0
+				width: 100%
+				border: 0
+				border-radius: 0 0 2px 2px
+				padding: 0
+				>li>a
+					height: 37px
+					font-weight: 600
+					padding: 10px 16px
+				li a:hover
+					background-color: #30AE63
+					color: #FFF
 			&__selection
 				width: 100%	
 				height: 40px
-				padding: 0px 60px 0px 13px
+				padding: 0px 0px 0px 13px
 				border-radius: 2px
+				background-color: #fff
+				text-align: left
+				color: #000
 				border: 2px #DFE3E6 solid
+				font-weight: 600
+				&:hover
+					background-color: #fff
+					color: #000
+					border: 2px #DFE3E6 solid
+				&:focus
+					background-color: #fff
+					color: #000
+					border: 2px #DFE3E6 solid
+						
+				
 		&__room
 			width: 29%
 			&__text
@@ -94,17 +142,20 @@
 	&__property
 		&__content
 			min-width: 320px
-			max-width: 336px
-			margin-right: 88px
+			max-width: 350px
+			font-weight: 600
+			margin-left: 5px
 			&__big-text
-				font-size: 27px
-				margin-bottom: 23px
-				padding-top: 2px
+				font-size: 24px
+				margin-bottom: 27px
+				padding-top: 3px
+				padding-left: 4px
+				letter-spacing: -1px
 			&__place-type
 				display: flex
 				justify-content: space-between
-				padding-right: 81px
-				padding-left: 5px
+				padding-right: 80px
+				padding-left: 9px
 				margin-bottom: 22px
 				&__item
 					align-self: flex-end
@@ -112,73 +163,141 @@
 					border-bottom: 2px transparent solid
 
 			&__form
+				.dropdown-toggle.btn-primary:focus
+					background-color: #fff
+					color: #000
+					border-color: #DFE3E6
+				.open > .dropdown-toggle.btn-primary
+					background-color: #fff
+					color: #000
+					border-color: #DFE3E6
+					&:focus
+						background-color: #fff
+						color: #000
+						border-color: #DFE3E6
+				.btn 
+					text-align: left
+					background-color: #fff
+					color: #000	
+					font-weight: 600
+					border: 2px #DFE3E6 solid 
+				.btn .caret
+					position: absolute
+					right: 19px
+					top: 18px
+					color: #30AE63
+					width: 9px
+				.dropdown-menu
+					margin: 0px 0px 0px 3px
+					width: 97%
+					border: 0
+					border-radius: 0 0 2px 2px
+					padding: 0
+					>li>a
+						height: 37px
+						font-weight: 600
+						padding: 11px 38px
+						font-size: 11px
+					li a:hover
+						background-color: #30AE63
+						color: #FFF
 				&__selection
 					margin-left: 2px
 					width: 98%
 					height: 40px
-					margin-bottom: 31px
+					font-size: 12px
+					letter-spacing: -0.7px
+					.fa	
+						color: red
+						font-size: 10px
+						margin: 0px 12px 0px 4px
 				&__submit
 					width: 100%
 					height: 40px
 					padding-left: 8px
-					//
+					font-size: 13px
+					font-weight: normal
+					margin-top: 31px
+		&__pic
+			padding-left: 85px
 
 	&__best
+		letter-spacing: -0.7px
+		font-weight: 600
 		&__big-text
 			text-align: center
-			padding-top: 18px
-			font-size: 27px
-			margin-bottom: 27px
+			padding-top: 21px
+			font-size: 24px
+			margin-bottom: 29px
 		&__slider
 			display: flex	
 			margin: 0 auto
 			max-width: 844px
 			justify-content: space-between	
-			margin-bottom: 38px
+			margin-bottom: 39px
 			&__item
 				color: $dark
+				position: relative
+				.dots
+					position: absolute	
+					max-width: 5px
+					font-size: 4px
+					line-height: 2
+					color: white
+					opacity: 0.9
+					top: 14px
+					right: 15px
 				&__img
 					margin-bottom: 20px
 				&__price
 					font-size: 17px
-					margin-bottom: 7px
+					margin-bottom: 9px
 					.fa
 						color: $accent
-						margin-left: 28px
+						margin-left: 26px
 
 				&__info
-					font-size: 13px
+					font-size: 11px
 					color: #8C9BA5
+					word-spacing: 3px
+					.fa
+						color: inherit
+						font-size: 3px
+						vertical-align: middle
 				&__loc
-					padding-top: 15px
+					padding-top: 17px
 					padding-right: 7px
 					font-size: 13px
 					.fa
 						color: #E71D32
 						margin-right: 12px
 						font-size: 10px
+						vertical-align: top
 		&__prices
 			display: block
 			text-align: center
-			font-size: 18px
+			font-size: 16px
 			padding: 11px 0px
 			color: $dark
 			border-top: 2px #D8D8D8 solid
+			letter-spacing: -0.5px
 
 	
 	&__advert
+		letter-spacing: -0.7px
+		font-weight: 600
 		&__big-text
 			text-align: center
-			padding-top: 22px
-			font-size: 27px
-			margin-bottom: 27px
+			padding-top: 25px
+			font-size: 23px
+			margin-bottom: 30px
 		&__type
 			display: flex
 			justify-content: center
 			&__item
-				margin: 0px 21px
+				margin: 0px 20px
 				padding-bottom: 11px
-				margin-bottom: 25px
+				margin-bottom: 24px
 				align-self: flex-end
 				border-bottom: 2px transparent solid
 		&__slider
@@ -189,39 +308,62 @@
 			margin-bottom: 47px
 			&__item
 				color: $dark
+				position: relative
+				.dots
+					position: absolute	
+					max-width: 5px
+					font-size: 4px
+					line-height: 2
+					color: white
+					opacity: 0.9
+					top: 14px
+					right: 15px
 				&__img
-					margin-bottom: 17px
+					margin-bottom: 20px
 				&__price
 					font-size: 17px
-					margin-bottom: 7px
+					margin-bottom: 10px
 					.fa
 						color: $accent
-						margin-left: 17px
+						margin-left: 13px
 				&__info
-					font-size: 13px
+					font-size: 11px
+					color: #8C9BA5
+					word-spacing: 3px
+					.fa
+						color: inherit
+						font-size: 3px
+						vertical-align: middle
 				&__loc
 					padding-top: 16px
 					padding-right: 7px
 					font-size: 13px
 					.fa-red
 						color: #E71D32
-						margin-right: 5px
+						margin-right: 14px
+						vertical-align: top
+						font-size: 9px
 					.fa-blue
 						color: #2573D8
-						margin-right: 5px
+						margin-right: 14px
+						vertical-align: top
+						font-size: 9px
 					
 		&__fresh
 			display: block
 			text-align: center
-			font-size: 18px
-			padding: 10px 0
+			font-size: 16px
+			padding: 11px 0px
 			color: $dark
 			border-top: 2px #D8D8D8 solid
+			letter-spacing: -0.5px
+	
 	
 	&__social
+		font-weight: 600
 		&__big-text
 			text-align: center
-			font-size: 24px
+			font-size: 23px
 			padding-top: 43px
 			margin-bottom: 26px
 		&__small-text
@@ -229,8 +371,8 @@
 			margin: 0 auto
 			line-height: 1.5	
 			text-align: center
-			margin-bottom: 18px
-			font-size: 14px
+			margin-bottom: 20px
+			letter-spacing: -0.3px
 		&__option
 			display: flex
 			justify-content: center
@@ -256,30 +398,28 @@
 				ol
 					list-style-type: decimal
 				&__name
-					font-size: 27px
-					text-align: center
-					vertical-align: middle
-					padding-right: 50px
-					padding-top: 17px
+					font-size: 23px
+					padding-left: 75px
+					padding-top: 16px
 					background: url(../img/Oval3.png) 1px 0px no-repeat
 					height: 63px
 					margin-bottom: 34px
 				&__big-text
-					font-size: 25px
-					margin-bottom: 24px	
+					font-size: 23px
+					margin-bottom: 26px	
 				&__ol
 					padding-left: 22px
-					margin-bottom: 32px
+					margin-bottom: 35px
 					&__item
-						margin-bottom: 12px
-						line-height: 1.25
+						margin-bottom: 13px
+						line-height: 1.5
+						font-size: 13px
 				&__join
 					display: block
 					padding: 12px 0px
 					padding-left: 5px
-					
-
-
+					font-weight: normal
+					border: 2px transparent solid
 			&__flags	
 				position: absolute
 				width: 100%
@@ -287,27 +427,28 @@
 				text-align: center	
 				&__dot
 					margin: 0 3px
+
 	&__blog
 		background: #FFF
+		font-weight: 600
 		&__big-text
 			text-align: center
 			padding-top: 23px
-			font-size: 25px
-			margin-bottom: 25px
+			font-size: 23px
+			margin-bottom: 27px
 		&__small-text
-			font-size: 14px
+			font-size: 13px
 			max-width: 476px
 			margin: 0 auto
-			margin-bottom: 18px
+			margin-bottom: 21px
 			line-height: 1.5
 			text-align: center
-			word-spacing: 4px
 		&__slider
 			display: flex	
 			margin: 0 auto
 			max-width: 844px
 			justify-content: space-between	
-			margin-bottom: 40px
+			margin-bottom: 43px
 			&__item
 				max-width: 272px
 				color: $dark
@@ -330,45 +471,52 @@
 					top: 15px
 					right: 15px
 				&__img
-					margin-bottom: 16px
+					margin-bottom: 17px
 				&__rubric
 					font-size: 11px
 				&__article
-					font-size: 18px
-					padding-top: 4px
-					line-height: 1.4
-					margin-bottom: 20px
+					font-size: 15px
+					padding-top: 7px
+					line-height: 1.5
+					margin-bottom: 25px
 				&__author				
-					font-size: 13px
+					font-size: 11px
+					letter-spacing: 0.5px
+					.fa
+						color: inherit
+						font-size: 3px
+						vertical-align: middle
 		&__page
 			display: block
 			text-align: center
-			font-size: 18px
+			font-size: 15px
 			padding: 10px 0
 			color: $dark
 			border-top: 2px #D8D8D8 solid
+			
 
 .page-footer	
 	display: flex
 	justify-content: space-between
 	position: relative
-	padding-top: 33px
-	padding-bottom: 121px
+	padding-top: 34px
+	padding-bottom: 152px
+	font-weight: 600
 	&__metrovka,
 	&__partnership,
 	&__know-more,
 	&__contacts
-		font-size: 16px
+		font-size: 15px
 		&__name	
 			margin-bottom: 21px
 		&__item
 			display: block
-			margin-bottom: 17px
-			line-height: 1.4
-			font-size: 14px
+			margin-bottom: 16px
+			line-height: 1.6
+			font-size: 13px
 			color: $dark
 	&__metrovka
-		max-width: 165px
+		max-width: 158px
 	&__partnership
 		max-width: 155px	
 	&__know-more
@@ -378,6 +526,12 @@
 		&__item
 			margin-bottom: 5px
 			line-height: 1.8
+			letter-spacing: -0.5px
+			&_special-margin
+				margin-bottom: 14px
+			span
+				font-size: 11px
+				letter-spacing: 0
 			&__icon:hover
 				text-decoration: none
 			.fa
@@ -391,9 +545,12 @@
 			line-height: 1.2
 			width: 80%
 			margin-top: 14px
+			letter-spacing: -1.2px
+			font-weight: normal
+			border: 2px transparent solid
 	&__logo
 		position: absolute		
 		display: block
-		bottom: 58px
+		bottom: 56px
 		text-align: center
 		width: 100%
