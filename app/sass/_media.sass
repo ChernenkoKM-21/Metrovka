@@ -10,7 +10,53 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 889px)
 	/**/
+	.page-header
+		&__center
+			padding-left: 15px
+			padding-right: 15px
+			&__form
+				flex-wrap: wrap
+				flex-direction: row-reverse
+				max-width: 850px
+				&__submit
+					margin-top: 30px
+					margin-left: 123px
+				&__room
+					order: -1
 	.main
+		&__property
+			justify-content: center
+			margin-bottom: 21px
+			flex-wrap: wrap
+			padding: 41px 80px
+			&__content
+				&__place-type
+					padding: 0
+					justify-content: space-around
+			&__pic
+				order: -1
+				padding: 0
+				margin: 0 35px
+				margin-bottom: 30px
+				text-align: center
+				&__metro
+					max-width: 315px
+		&__best
+			&__big-text
+				padding-left: 15px
+				padding-right: 15px
+			&__slider
+				margin: 0 15px 39px
+				&__item
+					margin-right: 10px
+		&__advert
+			&__big-text
+				padding-left: 15px
+				padding-right: 15px
+			&__slider
+				margin: 0 15px 39px
+				&__item
+					margin-right: 10px			
 		&__social
 			&__slider
 				justify-content: space-around
@@ -48,6 +94,22 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 700px)
 	/**/
+	.page-header
+		&__center
+			&__big-text
+				line-height: 1.5
+			&__form
+				flex-direction: row
+				&__select-city
+					margin-bottom: 15px
+				&__select-city,
+				&__room
+					margin-right: 185px
+				&__room
+					order: 0
+				&__submit
+					margin-left: 0
+						
 	.main
 		&__social
 			&__small-text
@@ -81,6 +143,13 @@
 @media only screen and (max-width : 480px)
 	/**/
 	.main
+		&__best
+			&__big-text
+				line-height: 1.5
+		&__advert
+			&__big-text
+				line-height: 1.5	
+				margin-bottom: 20px	
 		&__social
 			&__small-text
 				max-width: 335px
