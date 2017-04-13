@@ -17,6 +17,8 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+
 
 	<!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#000">
@@ -44,23 +46,36 @@
 					<a href="#" class="page-header__center__nav-log__nav__item"><span class="dots"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></span>Еще</a>
 				</nav>
 				<div class="page-header__center__nav-log__log">
-					<a href="#" class="page-header__center__nav-log__log__place-advert"><i class="fa fa-plus-circle"></i>Разместить объявление</a>
+					<a href="#" class="page-header__center__nav-log__log__place-advert"><i class="fa fa-plus-circle"></i><b>Разместить объявление</b></a>
 					<a href="#" class="page-header__center__nav-log__log__log-in">Войти</a>
+					<!-- <a href="#" class="page-header__center__nav-log__log__hamburger hamburger hamburger--collapse">
+						<span class="page-header__center__nav-log__log__hamburger-box hamburger-box">
+							<span class="page-header__center__nav-log__log__hamburger-box__hamburger-inner hamburger-inner"></span>
+						</span>
+					</a> -->
 				</div>	
 			</div>
 
 			<h1 class="page-header__center__big-text">Поиск недвижимости в Украине</h1>
-			
+
 			<form class="page-header__center__form">
-			
+
 				<div class="page-header__center__form__select-city">	
 					<span class="page-header__center__form__select-city__text">Выберите город</span>
-					<select class="page-header__center__form__select-city__selection">
-						<option class="page-header__center__form__select-city__selection__option">Киев</option>
-						<option class="page-header__center__form__select-city__selection__option">Ровно</option>
-					</select>
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle page-header__center__form__select-city__selection" type="button" data-toggle="dropdown">Киев
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Киев</a></li>
+							<li><a href="#">Ровно</a></li>
+							<li><a href="#">Донецк</a></li>
+							<li><a href="#">Севастополь</a></li>
+							<li><a href="#">Одесса</a></li>
+						</ul>
+					</div>
 				</div>	
-				
+
 				<div class="page-header__center__form__room">
 					<span class="page-header__center__form__room__text">Кол-во комнат</span>
 					<button type="button" class="page-header__center__form__room__rooms-amount">1</button>
@@ -69,19 +84,19 @@
 					<button type="button" class="page-header__center__form__room__rooms-amount">4</button>
 					<button type="button" class="page-header__center__form__room__rooms-amount">5+</button>
 				</div>
-				
+
 				<button class="page-header__center__form__submit">Перейти к поиску</button>
 			</form>	
 		</div>
 	</header>
 	<!-- **********************Header section END***********************-->
-	
+
 
 	<!-- **********************Main section START***********************-->
 	<main class="main">
-		
+
 		<div class="main__property">
-				
+
 			<div class="main__property__content">	
 				<h2 class="main__property__content__big-text">Недвижимость возле метро</h2>
 				<div class="main__property__content__place-type">	
@@ -90,10 +105,18 @@
 					<a href="#" class="main__property__content__place-type__item accent-text">Офисы</a>
 				</div>
 				<form class="main__property__content__form">
-					<select class="main__property__content__form__selection">
-						<option class="main__property__content__form__selection__option"><!-- <i class="fa fa-circle" style="color: red"> --></i>Политехнический институт</option>
-						<option class="main__property__content__form__selection__option">КНУ им.Т.Шевченка</option>
-					</select>
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle main__property__content__form__selection" type="button" data-toggle="dropdown"><i class="fa fa-circle"></i>Политехнический институт
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Политехнический институт</a></li>
+							<li><a href="#">Универститет</a></li>
+							<li><a href="#">Житомерская</a></li>
+							<li><a href="#">Хрещатик</a></li>
+							<li><a href="#">Святошин</a></li>
+						</ul>
+					</div>
 					<button type="submit" class="main__property__content__form__submit button_primary">Показать результаты поиска</button>	
 				</form>
 			</div>
@@ -101,38 +124,58 @@
 				<img class="main__property__pic__metro" src="img/metro.jpg" alt="metro">
 			</div>	
 		</div>
-		
+
 		<!-- **********************main__best section START***********************-->
 		<div class="main__best">
 			<h2 class="main__best__big-text">Лучшие предложения в Киеве</h2>
-			
+
 			<div class="main__best__slider">
 				<a href="#" class="main__best__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
 					<img src="img/Group-10.jpg" alt="img" class="main__best__slider__item__img"/>
 					<p class="main__best__slider__item__price">7 800 грн <i class="fa fa-check-circle""></i></p>
-					<span class="main__best__slider__item__info">2 комн. 30 кв.м.</span>
+					<span class="main__best__slider__item__info">2 комн. <i class="fa fa-circle"></i> 30 кв.м.</span>
 					<h5 class="main__best__slider__item__loc"><i class="fa fa-circle"></i>Политехнический институт </h5>
 				</a>
 				<a href="#" class="main__best__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
 					<img src="img/Group-10.jpg" alt="img" class="main__best__slider__item__img"/>
 					<p class="main__best__slider__item__price">10 200 грн <i class="fa fa-check-circle"></i></p>
-					<span class="main__best__slider__item__info">1 комн. 30 кв.м.</span>
+					<span class="main__best__slider__item__info">1 комн. <i class="fa fa-circle"></i> 30 кв.м.</span>
 					<h5 class="main__best__slider__item__loc"><i class="fa fa-circle fa-red"></i>Политехнический институт</h5>
 				</a>
 				<a href="#" class="main__best__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
 					<img src="img/Group-10.jpg" alt="img" class="main__best__slider__item__img"/>
 					<p class="main__best__slider__item__price">6 900 грн <i class="fa fa-check-circle"></i></p>
-					<span class="main__best__slider__item__info">2 комн. 30 кв.м.</span>
+					<span class="main__best__slider__item__info">2 комн. <i class="fa fa-circle"></i> 30 кв.м.</span>
 					<h5 class="main__best__slider__item__loc"><i class="fa fa-circle fa-red"></i>Политехнический институт</h5>
 				</a>
 				<a href="#" class="main__best__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
 					<img src="img/Group-10.jpg" alt="img" class="main__best__slider__item__img"/>
 					<p class="main__best__slider__item__price">9 000 грн <i class="fa fa-check-circle"></i></p>
-					<span class="main__best__slider__item__info">2 комн. 30 кв.м.</span>
+					<span class="main__best__slider__item__info">2 комн. <i class="fa fa-circle"></i> 30 кв.м.</span>
 					<h5 class="main__best__slider__item__loc"><i class="fa fa-circle fa-red"></i>Политехнический институт</h5>
 				</a>
 			</div>
-			
+
 			<a href="#" class="main__best__prices">Смотреть лучшие ценовые прелдожения</a>
 		</div>
 		<!-- **********************main__best section END***********************-->
@@ -140,44 +183,64 @@
 		<!-- **********************main__advert section START***********************-->
 		<div class="main__advert">
 			<h2 class="main__advert__big-text">Последние объявления в Киеве</h2>
-			
+
 			<div class="main__advert__type">
 				<a href="#" class="main__advert__type__item accent-text">Квартиры</a>
 				<a href="#" class="main__advert__type__item accent-text">Дома</a>
 				<a href="#" class="main__advert__type__item accent-text">Офисы</a>
 			</div>
-			
+
 			<div class="main__advert__slider">
 				<a href="#" class="main__advert__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
 					<img src="img/flat_1.png" alt="img" class="main__advert__slider__item__img"/>
 					<p class="main__advert__slider__item__price">11 800 грн <i class="fa fa-check-circle"></i></p>
-					<span class="main__advert__slider__item__info">2 комн. 48 кв.м.</span>
+					<span class="main__advert__slider__item__info">2 комн. <i class="fa fa-circle"></i> 48 кв.м.</span>
 					<h5 class="main__advert__slider__item__loc"><i class="fa fa-circle fa-red"></i>Политехнический интститут</h5>
 				</a>
 				<a href="#" class="main__advert__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
 					<img src="img/flat_2.png" alt="img" class="main__advert__slider__item__img"/>
 					<p class="main__advert__slider__item__price">15 000 грн <i class="fa fa-check-circle"></i></p>
-					<span class="main__advert__slider__item__info">3 комн. 100 кв.м.</span>
+					<span class="main__advert__slider__item__info">3 комн. <i class="fa fa-circle"></i> 100 кв.м.</span>
 					<h5 class="main__advert__slider__item__loc"><i class="fa fa-circle fa-red"></i>Шулявская</h5>
 				</a>
 				<a href="#" class="main__advert__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
 					<img src="img/flat_3.png" alt="img" class="main__advert__slider__item__img"/>
 					<p class="main__advert__slider__item__price">11 800 грн <i class="fa fa-check-circle"></i></p>
-					<span class="main__advert__slider__item__info">1 комн. 30 кв.м.</span>
+					<span class="main__advert__slider__item__info">1 комн. <i class="fa fa-circle"></i> 30 кв.м.</span>
 					<h5 class="main__advert__slider__item__loc"><i class="fa fa-circle fa-blue"></i>Контрактовая площадь</h5>
 				</a>
 				<a href="#" class="main__advert__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
 					<img src="img/flat_4.png" alt="img" class="main__advert__slider__item__img"/>
 					<p class="main__advert__slider__item__price">7 000 грн <i class="fa fa-check-circle"></i></p>
-					<span class="main__advert__slider__item__info">2 комн. 40 кв.м.</span>
+					<span class="main__advert__slider__item__info">2 комн. <i class="fa fa-circle"></i> 40 кв.м.</span>
 					<h5 class="main__advert__slider__item__loc">просп. Победы, 18А</h5>
 				</a>
 			</div>
-			
+
 			<a href="#" class="main__advert__fresh">Смотреть самые свежие объявления</a>
 		</div>
 		<!-- **********************main__advert section END***********************-->
-		
+
 		<!-- **********************main__social section START***********************-->
 		<div class="main__social">
 			<h2 class="main__social__big-text">Общайтесь в Telegram</h2>
@@ -186,7 +249,7 @@
 				<a href="#" class="main__social__option__item accent-text">Поиск недвижимости</a>
 				<a href="#" class="main__social__option__item accent-text">Общение с клиентами</a>
 			</div>
-			
+
 			<div class="main__social__slider">
 				<img src="img/Group-19.png" alt="img" class="main__social__slider__phone" />
 				<div class="main__social__slider__telegram">
@@ -200,14 +263,14 @@
 					<a href="#" class="main__social__slider__telegram__join button_primary">Присоедениться в Telegram</a>
 				</div>
 				<div class="main__social__slider__flags">
-					<img src="../img/Oval4.png" alt="img" class="main__social__slider__flags__dot" />					
-					<img src="../img/Oval4-1.png" alt="img" class="main__social__slider__flags__dot" />
+					<img src="img/Oval4.png" alt="img" class="main__social__slider__flags__dot" />					
+					<img src="img/Oval4-1.png" alt="img" class="main__social__slider__flags__dot" />
 				</div>
 			</div>
-	
+
 		</div>
 		<!-- **********************main__social section END***********************-->
-	
+
 		<!-- **********************main__blog section START***********************-->
 		<div class="main__blog">
 			<h2 class="main__blog__big-text">Блог Metrovka</h2>
@@ -215,33 +278,48 @@
 
 			<div class="main__blog__slider">
 				<a href="#" class="main__blog__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
 					<img src="img/Group10.jpg" alt="img" class="main__blog__slider__item__img"/>
 					<span class="main__blog__slider__item__rubric pink_item">ЛАЙФХАК</span>
 					<h5 class="main__blog__slider__item__article">Киевляне могут оплатить коммуналку через Facebook...</h5>
-					<p class="main__blog__slider__item__author">Татьяна Малыняк  5 мин чтения</p>
+					<p class="main__blog__slider__item__author">Татьяна Малыняк <i class="fa fa-circle"></i> 5 мин чтения</p>
 				</a>
 				<a href="#" class="main__blog__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
 					<img src="img/advice.png" alt="img" class="main__blog__slider__item__img"/>
 					<span class="main__blog__slider__item__rubric green_item">СОВЕТЫ METROVKA</span>
 					<h5 class="main__blog__slider__item__article">ТОП-5 Самых дешевых квартир Киева</h5>
-					<p class="main__blog__slider__item__author">Татьяна Малыняк  4 мин чтения</p>
+					<p class="main__blog__slider__item__author">Татьяна Малыняк <i class="fa fa-circle"></i> 4 мин чтения</p>
 				</a>
 				<a href="#" class="main__blog__slider__item">
+					<span class="dots">
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+						<i class="fa fa-circle"></i>
+					</span>
 					<img src="img/technologies.png" alt="img" class="main__blog__slider__item__img"/>
 					<span class="main__blog__slider__item__rubric blue_item">ТЕХНОЛОГИИ</span>
 					<h5 class="main__blog__slider__item__article">Смарт квартиры: цены, предложения и законность</h5>
-					<p class="main__blog__slider__item__author">Татьяна Малыняк  2 мин чтения</p>
+					<p class="main__blog__slider__item__author">Татьяна Малыняк <i class="fa fa-circle"></i> 2 мин чтения</p>
 				</a>
 			</div>
-			
+
 			<a href="#" class="main__blog__page">Перейти на страницу блога</a>
 		</div>
 		<!-- **********************main__blog section END***********************-->
-	
+
 
 	</main>
 	<!-- **********************Main section END***********************-->
-	
+
 
 	<footer class="page-footer">
 		<div class="page-footer__metrovka">
@@ -278,17 +356,23 @@
 					<i class="fa fa-instagram"></i>
 				</a>	
 			</div>
-			<a href="#" class="page-footer__contacts__item">ул.Жилянская, 37 <br />Киев 01033</a>
+			<a href="#" class="page-footer__contacts__item page-footer__contacts__item_special-margin">ул.Жилянская, 37 <br /><span>Киев 01033</span></a>
 			<a href="#" class="page-footer__contacts__item">info@metrovka.ua</a>
 			<a href="#" class="page-footer__contacts__button button_primary">Оставить заявку</a>
 		</div>
-		
+
 		<a href="#" class="page-footer__logo"><img src="img/footer-logo.png" alt="img"></a>
 	</footer>
 
-	
+
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src="js/scripts.min.js"></script>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 
 </body>
 </html>
