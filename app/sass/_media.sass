@@ -3,6 +3,7 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+
 @media only screen and (max-width : 1024px)
 	.page-header__center
 		margin: 0 7% 0 7%
@@ -124,10 +125,84 @@
 				&__place-type
 					padding: 0
 
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 889px)
+	/**/
+	.main
+		&__social
+			&__slider
+				justify-content: space-around
+				margin-bottom: 83px
+				&__phone
+					display: none
+				&__telegram
+					margin: 0
+					max-width: 437px
+					max-height: 447px	
+					padding-bottom: 30px	
+		&__blog
+			&__slider
+				padding: 0px 15px
+				flex-wrap: wrap
+				justify-content: space-around
+				max-width: 800px
+				&__item
+					border-bottom: 2px #E8E8E8 solid
+					margin-bottom: 20px
+					&__author
+						margin-bottom: 15px
+
+	.page-footer
+		flex-wrap: wrap
+		justify-content: space-around
+		max-width: 650px
+		&__metrovka,
+		&__partnership,
+		&__know-more,
+		&__contacts
+			margin-bottom: 40px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 700px)
+	/**/
+	.main
+		&__social
+			&__small-text
+				max-width: 437px
+			&__option
+				justify-content: space-around
+				max-width: 437px
+				margin: 0 auto 41px
+				&__item
+					margin: 0
+			&__slider
+				justify-content: space-around
+				margin-bottom: 83px
+				&__telegram
+					padding-bottom: 30px	
+		&__blog
+			&__slider
+				&__item
+					margin: 0 10px 20px
+				
+	.page-footer
+		max-width: 400px
+		&__know-more
+			padding-left: 9px
+		&__contacts
+			padding-left: 40px
+
+
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+
 	.page-header__center
 		&__nav-log
 			margin-bottom: 15px
@@ -188,6 +263,35 @@
 			&__pic
 				min-width: 80%
 				padding: 0 0 20px 0
+
+	/**/
+	.main
+		&__social
+			&__small-text
+				max-width: 335px
+			&__slider
+				&__telegram
+					padding-right: 35px
+					padding-left: 15px
+				&__flags
+					bottom: -51px	
+		&__blog
+			&__small-text
+				max-width: 300px
+	.page-footer
+		max-width: 200px
+		&__metrovka,
+		&__partnership,
+		&__know-more,
+		&__contacts
+			margin-bottom: 40px
+			padding: 0
+			text-align: center
+		&__contacts
+			&__button
+				margin: 14px auto 0	
+
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
