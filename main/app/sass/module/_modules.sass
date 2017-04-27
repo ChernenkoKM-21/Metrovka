@@ -235,13 +235,16 @@
 		&__slider
 			display: flex	
 			margin: 0 auto
-			max-width: 844px
-			justify-content: space-between	
+			max-width: 844px	
 			margin-bottom: 39px
 			overflow: hidden
+			position: relative
 			&__item
 				color: $dark
 				position: relative
+				margin-right: 15px
+				margin-left: 0
+				transition: margin-left 0.3s linear
 				.dots
 					position: absolute	
 					max-width: 5px
@@ -277,6 +280,25 @@
 						margin-right: 12px
 						font-size: 10px
 						vertical-align: top
+			&__nav
+				position: absolute
+				top: 50px
+				width: 98%
+				padding: 0 5px
+				display: flex
+				justify-content: space-between
+				flex-direction: row-reverse
+				&__left,
+				&__right
+					background-color: #fff
+					opacity: 0.7
+					transition: opacity 0.1s linear
+					cursor: pointer
+					padding: 5px 9px
+					border-radius: 50%
+					&:hover
+						opacity: 1
+
 		&__prices
 			display: block
 			text-align: center
@@ -307,13 +329,15 @@
 		&__slider
 			display: flex	
 			margin: 0 auto
-			max-width: 844px
-			justify-content: space-between	
+			max-width: 844px	
 			margin-bottom: 47px
 			overflow: hidden
+			position: relative
 			&__item
 				color: $dark
 				position: relative
+				margin-right: 15px
+				transition: margin-left 0.3s linear
 				.dots
 					position: absolute	
 					max-width: 5px
@@ -353,7 +377,25 @@
 						margin-right: 14px
 						vertical-align: top
 						font-size: 9px
-					
+			&__nav
+				position: absolute
+				top: 50px
+				width: 98%
+				padding: 0 5px
+				display: flex
+				justify-content: space-between
+				flex-direction: row-reverse
+				&__left,
+				&__right
+					background-color: #fff
+					opacity: 0.7
+					transition: opacity 0.1s linear
+					cursor: pointer
+					padding: 5px 9px
+					border-radius: 50%
+					&:hover
+						opacity: 1
+
 		&__fresh
 			display: block
 			text-align: center
@@ -388,50 +430,57 @@
 				margin-bottom: 0px	
 				align-self: flex-end
 				border-bottom: 2px transparent solid
-		&__slider
-			display: flex
-			justify-content: space-between
-			position: relative
+		&__slider	
 			margin-bottom: 113px
-			&__phone
-				margin-left: 78px
-				margin-right: 91px
-			&__telegram
-				padding: 52px 74px 0px 41px
-				background-color: #FFF
-				margin: 63px 2px 65px auto
-				ol
-					list-style-type: decimal
-				&__name
-					font-size: 23px
-					padding-left: 75px
-					padding-top: 16px
-					background: url(../img/Oval3.png) 1px 0px no-repeat
-					height: 63px
-					margin-bottom: 34px
-				&__big-text
-					font-size: 23px
-					margin-bottom: 26px	
-				&__ol
-					padding-left: 22px
-					margin-bottom: 35px
-					&__item
-						margin-bottom: 13px
-						line-height: 1.5
-						font-size: 13px
-				&__join
-					display: block
-					padding: 12px 0px
-					padding-left: 5px
-					font-weight: normal
-					border: 2px transparent solid
+			position: relative
+			&__item
+				display: flex
+				justify-content: space-between
+				position: relative
+				&__phone
+					margin-left: 78px
+					margin-right: 91px
+				&__telegram
+					padding: 52px 74px 0px 41px
+					background-color: #FFF
+					margin: 63px 2px 65px auto
+					ol
+						list-style-type: decimal
+					&__name
+						font-size: 23px
+						padding-left: 75px
+						padding-top: 16px
+						background: url(../img/Oval3.png) 1px 0px no-repeat
+						height: 63px
+						margin-bottom: 34px
+					&__big-text
+						font-size: 23px
+						margin-bottom: 26px	
+					&__ol
+						padding-left: 22px
+						margin-bottom: 35px
+						&__item
+							margin-bottom: 13px
+							line-height: 1.5
+							font-size: 13px
+					&__join
+						display: block
+						padding: 12px 0px
+						padding-left: 5px
+						font-weight: normal
+						border: 2px transparent solid
 			&__flags	
 				position: absolute
 				width: 100%
 				bottom: -57px	
 				text-align: center	
-				&__dot
+				.fa 
+					background-color: transparent
+					color: transparent	
+					border: 2px #30ae63 solid
+					border-radius: 50%
 					margin: 0 3px
+					padding: 0 1px
 
 	&__blog
 		background: #FFF
@@ -552,10 +601,11 @@
 			margin-top: 14px
 			letter-spacing: -1.2px
 			font-weight: normal
-			border: 2px transparent solid
+			
 	&__logo
 		position: absolute		
 		display: block
 		bottom: 56px
 		text-align: center
 		width: 100%
+

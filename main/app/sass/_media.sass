@@ -51,7 +51,6 @@
 				padding-left: 15px
 				padding-right: 15px
 			&__slider
-				margin: 0 15px 39px
 				&__item
 					margin-right: 10px
 		&__advert
@@ -59,20 +58,20 @@
 				padding-left: 15px
 				padding-right: 15px
 			&__slider
-				margin: 0 15px 39px
 				&__item
 					margin-right: 10px			
 		&__social
 			&__slider
-				justify-content: space-around
 				margin-bottom: 83px
-				&__phone
-					display: none
-				&__telegram
-					margin: 0
-					max-width: 437px
-					max-height: 447px	
-					padding-bottom: 30px	
+				justify-content: initial
+				&__item	
+					&__phone
+						display: none
+					&__telegram
+						margin: 0 auto
+						max-width: 437px
+						max-height: 447px	
+						padding-bottom: 30px	
 		&__blog
 			&__slider
 				padding: 0px 15px
@@ -94,6 +93,30 @@
 		&__know-more,
 		&__contacts
 			margin-bottom: 40px
+
+	.popup
+		flex-direction: column
+		top: calc(50% - 366px)
+		left: calc(50% - 200px)
+		max-width: 400px
+		&__input,
+		&__select,
+		&__btn
+				width: 85%
+				max-width: 350px
+
+
+		&__btn
+				padding: 5px
+
+
+		&__close
+				order: -1
+				background-color: #F5F7FA
+				padding-left: 90%
+
+
+		
 
 
 /* Small Devices, Tablets */
@@ -225,7 +248,27 @@
 		&__contacts
 			&__button
 				margin: 14px auto 0	
-
+				
+	.openMenu-link
+			display: inherit
+			margin-right: 15px
+			padding-top: 5px
+		
+		
+	#openMenu:target
+			display: inherit
+			padding-top: 25px
+			padding-left: 20px
+		
+	.closeMenu-link
+		margin-left: calc(100% - 100px)
+	
+	.menu__nav-list
+		.nav__item
+			margin-bottom: 20px
+		
+	.menu__container
+		display: flex
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
